@@ -14,6 +14,7 @@ C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIE
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\WebAPIExceptionHandling.dll.config
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\WebAPIExceptionHandling.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\WebAPIExceptionHandling.pdb
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\Autofac.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -26,6 +27,7 @@ C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIE
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\System.Net.Http.Formatting.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\System.Web.Http.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\System.Web.Http.WebHost.dll
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\Autofac.xml
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.Web.xml
@@ -38,4 +40,3 @@ C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIE
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\System.Web.Http.WebHost.xml
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\obj\Debug\WebAPIExceptionHandling.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\obj\Debug\WebAPIExceptionHandling.pdb
-C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\obj\Debug\WebAPIExceptionHandling.csprojResolveAssemblyReference.cache

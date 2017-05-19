@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Authentication Client</title>
+</head>
+<body>
+    <h3>Authentication Response</h3>
+    <form id="userData">
+      UserName:<input type="email" name="Email" placeholder="Email" />
+      Password:<input type="password" name="Password" placeholder="Password" />
+      Confirm Parswword:<input type="password" name="ConfirmPassword" placeholder="ConfirmPassword" />
+       <input type="submit" id="register" value="Register" /><br />
+    </form>
+    <br />
+    <form id="login">
+        <input type="email" name="UserName" placeholder="Email" value="saurabh@yahoo.com"/>
+        <input type="password" name="Password" placeholder="Password" value="password1" />
+        <input type="submit" id="login" value="Login" />
+    </form>
+    <br />
+    <button id="getPatients"> Get Patients..</button>
+    <pre id="output"></pre>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <!--<script type="text/javascript"
+                   src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+    <script>
+        var url = "http://localhost:53530/api/patients/";
+        var url2 = "http://localhost:53530/api/patients/591de2f26d7fd81e582366b4/medications";
+        var local_access_token = "";
+        $(document).ready(function (){
+
+            var getPatientFunc = function () {
+                //modify to authenticate the request
+                //$.get(url).always(showResponseFunc)
+                $.ajax(url, {
+                    type: "GET",
+                    headers: getHeaders()
+                }).always(showResponseFunc);
+                return false;
+            };
+            var getHeaders = function () {
+                if (local_access_token) {
+                    return { "Authorization": "Bearer " + local_access_token};
+                }
+            };
+            var showResponseFunc = function (object) {
+
+                $("#output").text(JSON.stringify(object, null, 4));
+            };
+            var registerUserFunc = function () {
+
+                var regUrl = "api/account/register";
+                var data = $("#userData").serialize();
+                $.post(regUrl, data).always(showResponseFunc);
+                return false;
+            };
+            var loginFunc = function () {
+
+                var loginUrl = "/Token";
+                var data = $("#login").serialize();
+                data = data + "&grant_type=password";
+                //showResponseFunc(data);
+                $.post(loginUrl, data)
+                    .success(saveAccessTokenFunc)
+                    .always(showResponseFunc);
+                return false;
+            };
+            var saveAccessTokenFunc = function (data) {
+
+                local_access_token = data.access_token;
+                return false;
+            };
+            $("#getPatients").click(getPatientFunc);
+            ///Register a user
+            $("#register").click(registerUserFunc);
+            //logi
+            $("#login").click(loginFunc);
+        });
+      
+    </script>
+</body>
+</html>
