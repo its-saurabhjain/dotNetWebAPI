@@ -75,7 +75,7 @@ namespace WebAPISecurity.Providers
         {
             if (context.ClientId == _publicClientId)
             {
-                Uri expectedRootUri = new Uri(context.Request.Uri, "/");
+                Uri expectedRootUri = new Uri(context.Request.Uri, "/default.html");
 
                 if (expectedRootUri.AbsoluteUri == context.RedirectUri)
                 {

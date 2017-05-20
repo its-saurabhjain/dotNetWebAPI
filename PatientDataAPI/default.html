@@ -49,14 +49,12 @@
                 $("#output").text(JSON.stringify(object, null, 4));
             };
             var registerUserFunc = function () {
-
                 var regUrl = "api/account/register";
                 var data = $("#userData").serialize();
                 $.post(regUrl, data).always(showResponseFunc);
                 return false;
             };
             var loginFunc = function () {
-
                 var loginUrl = "/Token";
                 var data = $("#login").serialize();
                 data = data + "&grant_type=password";
