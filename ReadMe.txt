@@ -16,3 +16,10 @@ mongod --config "c:\Program Files\MongoDB\mongo.config"
 ****************************Gotchas************************************************************* 
 -for registering use Password123@, 
 -if html Form doesn't have a filed with name attribute jquery .serialize() will not work
+
+
+
+OAuth.Demo
+This application demos use of Identity Server and token for authentication
+The Private Method of the home controller is having Authorize attribute, so it needs to have a authorization token,
+once authorized this method call a WebAPIRouting API's Profile-->GetAsync method.

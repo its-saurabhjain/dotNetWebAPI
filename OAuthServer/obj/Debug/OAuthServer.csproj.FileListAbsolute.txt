@@ -38,4 +38,3 @@ C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthSe
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthServer\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthServer\obj\Debug\OAuthServer.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthServer\obj\Debug\OAuthServer.pdb
-C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthServer\obj\Debug\OAuthServer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>External Authentication Client</title>
+</head>
+<body>
+    <h3>Authentication Response</h3>
+    <form id="login">
+        <input type="email" name="Email" placeholder="Email" value="################" />
+        <input type="password" name="Password" placeholder="Password" value="##########" />
+    </form>
+    <h3>Invoking Google OAuth API using WebAPI Framework from Javascript</h3>
+    <button type="submit" id="externalLoginList" value="GoogleLogin">External Logins List</button>
+    <button type="submit" id="googleAuth" value="GoogleAuth">Google Auth</button>
+    <button type="submit" id="getUserInfo" value="GetUserInfo">Get UserInfo</button>
+    <button type="submit" id="registerExtUser" value="RegisterUser">Register User</button>
+    <button type="submit" id="clearToken" value="ClearToken">ClearToken User</button>
+    <br />
+    <h3>Invoking Google OAuth API directly</h3>
+    <button type="submit" id="googleAccessToken" value="GoogleAccessToken">AccessToken</button>
+    <button type="submit" id="googleIdTokenCode" value="GoogleIdTokenCode">ID_Token Code</button>
+    <button type="submit" id="googleIdToken" value="GoogleIdToken">ID_Token</button>
+    <button type="submit" id="googleTokenValidate" value="googleTokenValidate">Validate Tokens</button>
+    <button type="submit" id="googleDriveAPI" value="googleDriveAPI">Google Drive Access</button>
+    <pre id="output"></pre>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/googleOAuth.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#externalLoginList").click(loginListFunc);
+            $("#googleAuth").click(googleAuthFunc);
+            $("#getUserInfo").click(getUserInfoFunc);
+            $("#registerExtUser").click(registerExternalUserFunc);
+            $("#clearToken").click(clearTokenFunc);
+            ///////
+            $("#googleAccessToken").click(oauthAccessToken);
+            $("#googleIdTokenCode").click(oauthIdTokenCode);
+            $("#googleIdToken").click(getIdTokenFunc);
+            $("#googleTokenValidate").click(validateToken);
+            $("#googleDriveAPI").click(getGoogleDriveAPI);
+        });
+     
+    </script>
+</body>
+</html>
