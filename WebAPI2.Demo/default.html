@@ -5,25 +5,61 @@
     <title>External Authentication Client</title>
 </head>
 <body>
-    <h3>Authentication Response</h3>
-    <form id="login">
-        <input type="email" name="Email" placeholder="Email" value="################" />
-        <input type="password" name="Password" placeholder="Password" value="##########" />
-    </form>
-    <h3>Invoking Google OAuth API using WebAPI Framework from Javascript</h3>
-    <button type="submit" id="externalLoginList" value="GoogleLogin">External Logins List</button>
-    <button type="submit" id="googleAuth" value="GoogleAuth">Google Auth</button>
-    <button type="submit" id="getUserInfo" value="GetUserInfo">Get UserInfo</button>
-    <button type="submit" id="registerExtUser" value="RegisterUser">Register User</button>
-    <button type="submit" id="clearToken" value="ClearToken">ClearToken User</button>
-    <br />
-    <h3>Invoking Google OAuth API directly</h3>
-    <button type="submit" id="googleAccessToken" value="GoogleAccessToken">AccessToken</button>
-    <button type="submit" id="googleIdTokenCode" value="GoogleIdTokenCode">ID_Token Code</button>
-    <button type="submit" id="googleIdToken" value="GoogleIdToken">ID_Token</button>
-    <button type="submit" id="googleTokenValidate" value="googleTokenValidate">Validate Tokens</button>
-    <button type="submit" id="googleDriveAPI" value="googleDriveAPI">Google Drive Access</button>
-    <pre id="output"></pre>
+    <table border="1" s>
+    <tr>
+        <td style="min-width: 200px;">
+            <h3>Invoking Google OAuth API using WebAPI Framework from Javascript</h3>
+            <b>Authorization Code Flow </b>
+            <br />
+            1. Resource Owner (Web Application) generates the code
+            <br />
+            2. Code generated above is shared with Google OAuth (Authorization Provider) for exchange of token
+            <br />
+            which generates access_token and id_token for authentication and authorization
+            <br />
+            3. The access token is used for access check while invoking WebAPI action
+            <br />
+            <button type="submit" id="externalLoginList" value="GoogleLogin">External Logins List</button>
+            <button type="submit" id="googleAuth" value="GoogleAuth">Google Auth</button>
+            <button type="submit" id="getUserInfo" value="GetUserInfo">Get UserInfo</button>
+            <button type="submit" id="registerExtUser" value="RegisterUser">Register User</button>
+            <button type="submit" id="getProducts" value="getProducts">Get Products</button>
+            <button type="submit" id="clearToken" value="ClearToken">ClearToken User</button>
+            <br />
+            <h3>Invoking Google OAuth API directly</h3>
+            <b>Implicit flow (Access Token)</b>
+            <br />
+            1. Resource Owner (Google OAuth) generates a access token
+            <br />
+            2. This access token is uses to access Google API
+            <br />
+            <button type="submit" id="googleAccessToken" value="GoogleAccessToken">AccessToken</button>
+            <br />
+            <b>Authorization_Code Flow</b>
+            <br />
+            1. Resource Owner (Google) generates the code
+            <br />
+            2. Code generated above is shared with Google OAuth (Authorization Provider) for exchange of token
+            <br />
+            which generates access_token and id_token for authentication and authorization
+            <br />
+            <button type="submit" id="googleIdTokenCode" value="GoogleIdTokenCode">ID_Token Code</button>
+            <button type="submit" id="googleIdToken" value="GoogleIdToken">ID_Token</button>
+            <br />
+            3. Validate the access_token and id_token
+            <br />
+            <button type="submit" id="googleTokenValidate" value="googleTokenValidate">Validate Tokens</button>
+            <br />
+            4. Invoke Google API's
+            <br />
+            <button type="submit" id="googleDriveAPI" value="googleDriveAPI">Google Drive Access</button>
+        </td>
+         <td valign="top" style="min-width: 1200px;max-width: 1200px">
+             <h3>Authentication Response</h3>
+             <pre id="output" style="min-width: 1200px;max-width: 1200px; text-overflow:clip"></pre>
+         </td>
+       </tr>
+    </table>
     <script src="Scripts/jquery-1.10.2.js"></script>
     <script src="Scripts/googleOAuth.js"></script>
     <script>
@@ -40,6 +76,7 @@
             $("#googleIdToken").click(getIdTokenFunc);
             $("#googleTokenValidate").click(validateToken);
             $("#googleDriveAPI").click(getGoogleDriveAPI);
+            $("#getProducts").click(getProductsFunc);
         });
      
     </script>

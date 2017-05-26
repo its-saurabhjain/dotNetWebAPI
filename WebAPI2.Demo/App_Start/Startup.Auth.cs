@@ -81,8 +81,8 @@ namespace WebAPI2.Demo
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "384570901380-qo9736vnefaj1s0oai3daf82h348c2fg.apps.googleusercontent.com",
-                ClientSecret = "4WwMm5PmGUvsQMqVOhu4gYSr"
+                ClientId = "To be added",
+                ClientSecret = "To be added"
             });
             /////////Using OAuth Server/////////////
 

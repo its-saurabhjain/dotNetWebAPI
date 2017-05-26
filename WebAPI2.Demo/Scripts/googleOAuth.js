@@ -22,11 +22,12 @@ var local_code = '';
         var redirection = "redirect_uri=http%3A%2F%2Flocalhost%3A7825%2Fdefault.html";
         googleUrl = parameters[0] + '&' + parameters[1] + '&' + parameters[2] + '&' + redirection + '&' + parameters[4];
     };
-
+    // authenticate the user by redirecting to google sigin screen
     var googleAuthFunc = function () {
-        window.location.href = googleUrl;
         //showResponseFunc(googleUrl);
+        window.location.href = googleUrl;
     };
+    //get the access token 
     var getAccessTokenFunc = function () {
         if (location.hash) {
             if (location.hash.split("access_token=")) {
@@ -36,9 +37,8 @@ var local_code = '';
         return false;
     };
     var getIdTokenFunc = function () {
-
         var href = window.location.href;
-        local_code = href.split("code=")[1].split('&')[0];
+        var local_code = href.split("code=")[1].split('&')[0];
         $.ajax('https://www.googleapis.com/oauth2/v4/token',
             {
                 type: "POST",
@@ -46,8 +46,8 @@ var local_code = '';
                 dataType: 'json',
                 data: {
                     "code": local_code,
-                    "client_id": '384570901380-qo9736vnefaj1s0oai3daf82h348c2fg.apps.googleusercontent.com',
-                    "client_secret": '4WwMm5PmGUvsQMqVOhu4gYSr',
+                    "client_id": 'To Be added',
+                    "client_secret": 'To Be added',
                     "redirect_uri": 'http://localhost:7825/default.html',
                     "grant_type": "authorization_code"
                 }
@@ -58,23 +58,31 @@ var local_code = '';
     var validateToken = function () {
         var href = window.location.href;
         if (href.indexOf('access_token') >= 0) {
-            local_code = href.split("access_token=")[1].split('&')[0];
+            var local_code = href.split("access_token=")[1].split('&')[0];
             $.get("https://www.googleapis.com/oauth2/v3/tokeninfo?access_token=" + local_code)
+                .success(saveIdToken(local_code))
                 .always(showResponseFunc);
         }
         if (id_token != '') {
             $.get("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=" + id_token)
-                .success(saveIdToken)
                 .always(showResponseFunc);
         }
     };
     var saveIdToken = function (data) {
-        id_token = data['id_token'];
-        access_token = data['access_token'];
-        local_access_token = access_token;
+        //save id_token and access token once code is exchanged for token
+        var str = JSON.stringify(data);
+        if (str.indexOf('access_token') !== -1) {
+            id_token = data['id_token'];
+            access_token = data['access_token'];
+            local_access_token = access_token;
+        }
+        else {
+            //save access token from google oAuth
+            local_access_token = data;
+        };
     };
     var getUserInfoFunc = function () {
-        $.ajax('/api/accountAPI/userinfo', {
+        $.ajax('/api/accountapi/userinfo', {
             type: "GET",
             headers: getHeaders()
         }).always(showResponseFunc);
@@ -83,7 +91,6 @@ var local_code = '';
     var getHeaders = function () {
         getAccessTokenFunc();
         if (local_access_token) {
-
             return { "Authorization": "Bearer " + local_access_token };
         }
     };
@@ -102,13 +109,14 @@ var local_code = '';
     };
     var clearTokenFunc = function () {
         local_access_token = '';
+        //location.replace('http://localhost:7825/default.html');
         window.location.hash = '';
         window.location.reload();
     };
     // Access to Google API
+    // Get code, then get ID_Token use access_token
     var getGoogleDriveAPI = function () {
-
-        $.get('https://www.googleapis.com/drive/v2/files?access_token=' + local_code)
+        $.get('https://www.googleapis.com/drive/v2/files?access_token=' + local_access_token)
             .always(showResponseFunc);
     };
 
@@ -121,13 +129,16 @@ var local_code = '';
     function oauthAccessToken() {
         // Google's OAuth 2.0 endpoint for requesting an access token
         var oauth2Endpoint = 'https://accounts.google.com/o/oauth2/v2/auth';
+
+        //var oauth2Endpoint = 'https://accounts.google.com/signin/oauth/oauthchooseaccount';
         var url2 = oauth2Endpoint + '?' +
             "client_id=384570901380-qo9736vnefaj1s0oai3daf82h348c2fg.apps.googleusercontent.com&" +
             "redirect_uri=http%3A%2F%2Flocalhost%3A7825%2Fdefault.html&" +
+            "destination=http%3A%2F%2Flocalhost%3A7825%2Fdefault.html&" +
             "response_type=token&" +     //receive a access_token
             "scope=openid%20email&" +
-            //"include_granted_scopes=true&" +
-            "prompt=select_account&" +    //none or select_account
+            "include_granted_scopes=true&" +
+            "prompt=select_account&" +   //none or select_account
             "state='pass-through value'";
         window.location.href = url2;
         return false;
@@ -141,7 +152,7 @@ var local_code = '';
             "redirect_uri=http%3A%2F%2Flocalhost%3A7825%2Fdefault.html&" +
             "response_type=code&" +     //receive a code id_token & access token
             //"response_type=client_credentials&" +
-            "scope=openid%20email&" +
+            "scope=openid%20email%20profile&" +
             "include_granted_scopes=true&" +
             "prompt=select_account&" +    //none or select_account
             "access_type=offline&" +
@@ -149,3 +160,15 @@ var local_code = '';
         window.location.href = url2;
         return false;
     };
+
+    function getProductsFunc() {
+        //alert(local_access_token);
+        $.ajax('/api/products',
+            {
+                type: "GET",
+                headers: getHeaders()
+            }).always(showResponseFunc);
+        return false;
+    };
+
+
