@@ -162,12 +162,25 @@ var local_code = '';
     };
 
     function getProductsFunc() {
-        //alert(local_access_token);
+        /*
         $.ajax('/api/products',
             {
                 type: "GET",
                 headers: getHeaders()
             }).always(showResponseFunc);
+
+        */
+        var loginData = {
+            grant_type: 'password',
+            username: "itsaurabh@gmail.com",
+            password: "saurabh74";
+        };
+        $.ajax({
+            type: 'POST',
+            url: '/Token',
+            data: loginData
+        }).always(showResponseFunc);
+
         return false;
     };
 

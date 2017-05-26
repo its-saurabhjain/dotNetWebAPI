@@ -18,6 +18,9 @@ namespace WebAPI2.Demo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            ///seed Monogo db with initial data for patent api
+            MongoConfig.Seed();
         }
     }
 }

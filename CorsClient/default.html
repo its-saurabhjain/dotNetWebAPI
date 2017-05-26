@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>Cors Client</title>
-</head><body>
+</head>
+<body>
     <h3>Cors Response</h3>
     <button id="getPatients"> Get Patients..</button>
     <pre id="output"></pre>
@@ -11,8 +12,8 @@
 
     <script src="Scripts/jquery-3.1.1.js"></script>
     <script>
-        var url = "http://localhost:53530/api/patients/";
-        var url2 = "http://localhost:53530/api/patients/591de2f26d7fd81e582366b4/medications";
+        var url = "http://localhost:7825/api/patients/";
+        var url2 = "http://localhost:7825/api/patients/591de2f26d7fd81e582366b4/medications";
         $(function () {
 
             var getPatientFunc = function () {
@@ -23,7 +24,7 @@
 
                 $("#output").text(JSON.stringify(object, null, 4));
             }
-            //var url = "http://localhost:53530/api/patients/";
+            //var url = "http://localhost:7825/api/patients/";
             $("#getPatients").click(getPatientFunc);
         });
         

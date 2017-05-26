@@ -102,3 +102,13 @@ C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\obj\Debug\WebAPI2.Demo.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\obj\Debug\WebAPI2.Demo.pdb
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\obj\Debug\WebAPI2.Demo.csprojResolveAssemblyReference.cache
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\MongoDB.Bson.dll
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\MongoDB.Driver.Core.dll
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\MongoDB.Driver.dll
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\System.Web.Cors.dll
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\System.Web.Http.Cors.dll
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\MongoDB.Bson.xml
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\MongoDB.Driver.xml
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\MongoDB.Driver.Core.xml
+C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPI2.Demo\bin\System.Web.Http.Cors.xml

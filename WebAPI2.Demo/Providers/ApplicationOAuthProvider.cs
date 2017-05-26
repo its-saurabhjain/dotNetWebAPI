@@ -75,7 +75,7 @@ namespace WebAPI2.Demo.Providers
         {
             if (context.ClientId == _publicClientId)
             {
-                Uri expectedRootUri = new Uri(context.Request.Uri, "/default.html");
+                Uri expectedRootUri = new Uri(context.Request.Uri, "/googleOAuth.html");
 
                 if (expectedRootUri.AbsoluteUri == context.RedirectUri)
                 {

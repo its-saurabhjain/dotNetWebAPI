@@ -2,83 +2,97 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>External Authentication Client</title>
+    <title>Authentication Client</title>
 </head>
 <body>
-    <table border="1" s>
-    <tr>
-        <td style="min-width: 200px;">
-            <h3>Invoking Google OAuth API using WebAPI Framework from Javascript</h3>
-            <b>Authorization Code Flow </b>
-            <br />
-            1. Resource Owner (Web Application) generates the code
-            <br />
-            2. Code generated above is shared with Google OAuth (Authorization Provider) for exchange of token
-            <br />
-            which generates access_token and id_token for authentication and authorization
-            <br />
-            3. The access token is used for access check while invoking WebAPI action
-            <br />
-            <button type="submit" id="externalLoginList" value="GoogleLogin">External Logins List</button>
-            <button type="submit" id="googleAuth" value="GoogleAuth">Google Auth</button>
-            <button type="submit" id="getUserInfo" value="GetUserInfo">Get UserInfo</button>
-            <button type="submit" id="registerExtUser" value="RegisterUser">Register User</button>
-            <button type="submit" id="getProducts" value="getProducts">Get Products</button>
-            <button type="submit" id="clearToken" value="ClearToken">ClearToken User</button>
-            <br />
-            <h3>Invoking Google OAuth API directly</h3>
-            <b>Implicit flow (Access Token)</b>
-            <br />
-            1. Resource Owner (Google OAuth) generates a access token
-            <br />
-            2. This access token is uses to access Google API
-            <br />
-            <button type="submit" id="googleAccessToken" value="GoogleAccessToken">AccessToken</button>
-            <br />
-            <b>Authorization_Code Flow</b>
-            <br />
-            1. Resource Owner (Google) generates the code
-            <br />
-            2. Code generated above is shared with Google OAuth (Authorization Provider) for exchange of token
-            <br />
-            which generates access_token and id_token for authentication and authorization
-            <br />
-            <button type="submit" id="googleIdTokenCode" value="GoogleIdTokenCode">ID_Token Code</button>
-            <button type="submit" id="googleIdToken" value="GoogleIdToken">ID_Token</button>
-            <br />
-            3. Validate the access_token and id_token
-            <br />
-            <button type="submit" id="googleTokenValidate" value="googleTokenValidate">Validate Tokens</button>
-            <br />
-            4. Invoke Google API's
-            <br />
-            <button type="submit" id="googleDriveAPI" value="googleDriveAPI">Google Drive Access</button>
-        </td>
-         <td valign="top" style="min-width: 1200px;max-width: 1200px">
-             <h3>Authentication Response</h3>
-             <pre id="output" style="min-width: 1200px;max-width: 1200px; text-overflow:clip"></pre>
-         </td>
-       </tr>
-    </table>
+    <h3>Authentication Response</h3>
+    <form id="userData">
+      UserName:<input type="email" name="Email" placeholder="Email" />
+      Password:<input type="password" name="Password" placeholder="Password" />
+      Confirm Parswword:<input type="password" name="ConfirmPassword" placeholder="ConfirmPassword" />
+       <input type="submit" id="register" value="Register" /><br />
+    </form>
+    <br />
+    <form id="login">
+        <input type="email" name="UserName" placeholder="Email" value="saurabh@yahoo.com"/>
+        <input type="password" name="Password" placeholder="Password" value="password1" />
+        <input type="submit" id="login" value="Login" />
+    </form>
+    <br />
+    <button id="getPatients"> Get Patients..</button>
+    <input type="text" id="medication" name="medication" placeholder="medication" value="Medication ID" />
+    <button id="getMedication"> Get Medication..</button>
+    <pre id="output"></pre>
     <script src="Scripts/jquery-1.10.2.js"></script>
-    <script src="Scripts/googleOAuth.js"></script>
+    <!--<script type="text/javascript"
+                   src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
     <script>
+        var url = "http://localhost:7825/api/patients/";
+        //var url2 = "http://localhost:7825/api/patients/591de2f26d7fd81e582366b4/medications";
+        var local_access_token = "";
         $(document).ready(function () {
 
-            $("#externalLoginList").click(loginListFunc);
-            $("#googleAuth").click(googleAuthFunc);
-            $("#getUserInfo").click(getUserInfoFunc);
-            $("#registerExtUser").click(registerExternalUserFunc);
-            $("#clearToken").click(clearTokenFunc);
-            ///////
-            $("#googleAccessToken").click(oauthAccessToken);
-            $("#googleIdTokenCode").click(oauthIdTokenCode);
-            $("#googleIdToken").click(getIdTokenFunc);
-            $("#googleTokenValidate").click(validateToken);
-            $("#googleDriveAPI").click(getGoogleDriveAPI);
-            $("#getProducts").click(getProductsFunc);
+            var getMedicationFunc = function () {
+                var patientId = $("#medication").serialize().split("medication=")[1];
+                var url2 = url + patientId + "/medications";
+
+                $.ajax(url2, {
+                    type: "GET",
+                    headers: getHeaders()
+                }).always(showResponseFunc);
+                return false;
+            };
+
+            var getPatientFunc = function () {
+                //modify to authenticate the request
+                //$.get(url).always(showResponseFunc)
+                $.ajax(url, {
+                    type: "GET",
+                    headers: getHeaders()
+                }).always(showResponseFunc);
+                return false;
+            };
+            var getHeaders = function () {
+                if (local_access_token) {
+                    return { "Authorization": "Bearer " + local_access_token};
+                }
+            };
+            var showResponseFunc = function (object) {
+
+                $("#output").text(JSON.stringify(object, null, 4));
+            };
+            var registerUserFunc = function () {
+                //var regUrl = "api/account/register";
+                var regUrl = "api/accountAPI/register";
+                var data = $("#userData").serialize();
+                $.post(regUrl, data).always(showResponseFunc);
+                return false;
+            };
+            var loginFunc = function () {
+                var loginUrl = "/Token";
+                var data = $("#login").serialize();
+                data = data + "&grant_type=password";
+                //showResponseFunc(data);
+                $.post(loginUrl, data)
+                    .success(saveAccessTokenFunc)
+                    .always(showResponseFunc);
+                return false;
+            };
+            var saveAccessTokenFunc = function (data) {
+
+                local_access_token = data.access_token;
+                return false;
+            };
+
+
+            $("#getMedication").click(getMedicationFunc);
+            $("#getPatients").click(getPatientFunc);
+            ///Register a user
+            $("#register").click(registerUserFunc);
+            //login
+            $("#login").click(loginFunc);
         });
-     
+      
     </script>
 </body>
 </html>
