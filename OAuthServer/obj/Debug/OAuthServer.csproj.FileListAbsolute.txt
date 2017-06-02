@@ -38,3 +38,43 @@ C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthSe
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthServer\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthServer\obj\Debug\OAuthServer.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\OAuthServer\obj\Debug\OAuthServer.pdb
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\ApplicationInsights.config
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\csc.exe
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\System.Collections.Immutable.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\System.Reflection.Metadata.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\vbc.exe
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\VBCSCompiler.exe
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\roslyn\VBCSCompiler.exe.config
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\OAuthServer.dll.config
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\OAuthServer.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\OAuthServer.pdb
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\IdentityServer3.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.DependencyCollector.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.Web.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.WindowsServer.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.ApplicationInsights.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.Owin.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Owin.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\IdentityServer3.pdb
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\IdentityServer3.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.DependencyCollector.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.Web.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.AI.WindowsServer.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.ApplicationInsights.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.Owin.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Tutorials\dotNetWebAPI\OAuthServer\obj\Debug\OAuthServer.dll
+C:\Tutorials\dotNetWebAPI\OAuthServer\obj\Debug\OAuthServer.pdb

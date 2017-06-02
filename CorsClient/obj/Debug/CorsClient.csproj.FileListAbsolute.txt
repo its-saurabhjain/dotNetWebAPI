@@ -32,3 +32,35 @@ C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\CorsCli
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\CorsClient\obj\Debug\CorsClient.csprojResolveAssemblyReference.cache
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\CorsClient\obj\Debug\CorsClient.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\CorsClient\obj\Debug\CorsClient.pdb
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\csc.exe.config
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\csc.rsp
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\csi.rsp
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\vbc.exe.config
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\vbc.rsp
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\VBCSCompiler.exe.config
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\csc.exe
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\csi.exe
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\System.AppContext.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\System.Collections.Immutable.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\System.IO.FileSystem.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\System.Reflection.Metadata.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\vbc.exe
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\roslyn\VBCSCompiler.exe
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\CorsClient.dll.config
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\CorsClient.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\bin\CorsClient.pdb
+C:\Tutorials\dotNetWebAPI\CorsClient\obj\Debug\CorsClient.csprojResolveAssemblyReference.cache
+C:\Tutorials\dotNetWebAPI\CorsClient\obj\Debug\CorsClient.dll
+C:\Tutorials\dotNetWebAPI\CorsClient\obj\Debug\CorsClient.pdb

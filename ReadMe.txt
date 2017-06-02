@@ -29,7 +29,7 @@ The Id_token has claims, an application can use tokeninfo service to get the use
 -if html Form doesn't have a filed with name attribute jquery .serialize() will not work
 
 
-OAuth.Demo
+OAuth.Api
 This application demos use of Identity Server and token for authentication
 The Private Method of the home controller is having Authorize attribute, so it needs to have a authorization token,
 once authorized this method call a WebAPIRouting API's Profile-->GetAsync method.

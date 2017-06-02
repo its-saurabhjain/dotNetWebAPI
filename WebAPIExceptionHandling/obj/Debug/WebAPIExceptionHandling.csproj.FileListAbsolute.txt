@@ -40,3 +40,44 @@ C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIE
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\bin\System.Web.Http.WebHost.xml
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\obj\Debug\WebAPIExceptionHandling.dll
 C:\Users\30197821\Documents\Visual Studio 2015\Projects\dotNetWeb\WebAPI\WebAPIExceptionHandling\obj\Debug\WebAPIExceptionHandling.pdb
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\obj\Debug\WebAPIExceptionHandling.csprojResolveAssemblyReference.cache
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\ApplicationInsights.config
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\VBCSCompiler.exe.config
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\csc.exe
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\System.Collections.Immutable.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\System.Reflection.Metadata.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\vbc.exe
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\roslyn\VBCSCompiler.exe
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\WebAPIExceptionHandling.dll.config
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\WebAPIExceptionHandling.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\WebAPIExceptionHandling.pdb
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.DependencyCollector.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.Web.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.WindowsServer.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.ApplicationInsights.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Newtonsoft.Json.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\System.Net.Http.Formatting.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\System.Web.Http.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\System.Web.Http.WebHost.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.DependencyCollector.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.Web.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.AI.WindowsServer.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.ApplicationInsights.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\Newtonsoft.Json.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\System.Net.Http.Formatting.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\System.Web.Http.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\bin\System.Web.Http.WebHost.xml
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\obj\Debug\WebAPIExceptionHandling.dll
+C:\Tutorials\dotNetWebAPI\WebAPIExceptionHandling\obj\Debug\WebAPIExceptionHandling.pdb

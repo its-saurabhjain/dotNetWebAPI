@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIExceptionHandling", "WebAPIExceptionHandling\WebAPIExceptionHandling.csproj", "{9B9912CC-7129-487C-B7D6-A695FDCBF3CB}"
 EndProject
@@ -12,11 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsClient", "CorsClient\CorsClient.csproj", "{93A2364F-1401-43F7-AACC-5269EF430BC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth.Demo", "OAuth.Demo\OAuth.Demo.csproj", "{39BAD786-7105-4188-A617-1C219256F82B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI2.Demo", "WebAPI2.Demo\WebAPI2.Demo.csproj", "{A4AD4D6F-E89A-407F-A9A0-B0815C96693D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthServer", "OAuthServer\OAuthServer.csproj", "{0FCF6B15-7EAB-47BF-AEAC-C58710A2B56C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth.Api", "OAuth.Api\OAuth.Api.csproj", "{9A0A5028-2934-42B3-BBB2-10D3328A9906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth.Mvc", "OAuth.Mvc\OAuth.Mvc.csproj", "{39BAD786-7105-4188-A617-1C219256F82B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +27,13 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9B9912CC-7129-487C-B7D6-A695FDCBF3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9912CC-7129-487C-B7D6-A695FDCBF3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B9912CC-7129-487C-B7D6-A695FDCBF3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B9912CC-7129-487C-B7D6-A695FDCBF3CB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93A2364F-1401-43F7-AACC-5269EF430BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A2364F-1401-43F7-AACC-5269EF430BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93A2364F-1401-43F7-AACC-5269EF430BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93A2364F-1401-43F7-AACC-5269EF430BC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39BAD786-7105-4188-A617-1C219256F82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39BAD786-7105-4188-A617-1C219256F82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39BAD786-7105-4188-A617-1C219256F82B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A4AD4D6F-E89A-407F-A9A0-B0815C96693D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A4AD4D6F-E89A-407F-A9A0-B0815C96693D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4AD4D6F-E89A-407F-A9A0-B0815C96693D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +42,14 @@ Global
 		{0FCF6B15-7EAB-47BF-AEAC-C58710A2B56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCF6B15-7EAB-47BF-AEAC-C58710A2B56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FCF6B15-7EAB-47BF-AEAC-C58710A2B56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A0A5028-2934-42B3-BBB2-10D3328A9906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0A5028-2934-42B3-BBB2-10D3328A9906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0A5028-2934-42B3-BBB2-10D3328A9906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0A5028-2934-42B3-BBB2-10D3328A9906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39BAD786-7105-4188-A617-1C219256F82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39BAD786-7105-4188-A617-1C219256F82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39BAD786-7105-4188-A617-1C219256F82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39BAD786-7105-4188-A617-1C219256F82B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

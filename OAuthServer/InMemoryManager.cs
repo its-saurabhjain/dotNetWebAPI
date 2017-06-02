@@ -46,6 +46,8 @@ namespace OAuthServer
                     AllowedScopes = new List<string>
                     {
                         Constants.StandardScopes.OpenId,
+                        Constants.StandardScopes.Profile,
+                        Constants.StandardScopes.OfflineAccess,
                         "read"
                     },
                     Enabled = true,
@@ -66,6 +68,33 @@ namespace OAuthServer
                     RedirectUris = new List<string>
                     {
                         "http://localhost:26654/"
+                    },
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                        "http://localhost:26654/"
+                    },
+                    Enabled = true,
+                },
+                new Client {
+                    ClientId = "socialnetwork_code",
+                    ClientSecrets = new List<Secret> {
+                        new Secret("secret".Sha256())
+                    },
+                    ClientName="SocialNetwork",
+                    //Flow = Flows.AuthorizationCode,  //Manual Auth code flow
+                    Flow = Flows.Hybrid,    // with middlewrae and refresh token
+                    AllowedScopes = new List<string>
+                    {
+                        Constants.StandardScopes.OpenId,
+                        Constants.StandardScopes.Profile,
+                        Constants.StandardScopes.OfflineAccess,  //required for refresh token
+                        "read"
+                    },
+                    RedirectUris = new List<string>
+                    {
+                        //"http://localhost:26654/",   //OAuthServer.Mvc application
+                        //"http://localhost:26654/Home2/AuthorizationCallback/" //OAuthServer.Mvc application with Auth Code flow manual
+                        "http://localhost:26654/" //for refresh token
                     },
                     PostLogoutRedirectUris = new List<string>
                     {
