@@ -10,6 +10,7 @@ using IdentityServer3.Core.Models;
 using System.Collections.Generic;
 using OAuth.Data.Repositories;
 using System.Data.SqlClient;
+using IdentityServer3.Core.Services.Default;
 
 [assembly: OwinStartup(typeof(OAuthServer.Startup))]
 namespace OAuthServer
@@ -30,6 +31,9 @@ namespace OAuthServer
 
             var userRepository = new UserRepository(
                 ()=> new SqlConnection(ConfigurationManager.ConnectionStrings["User.DB"].ConnectionString));
+            //customizing the view screens for themes
+            var viewServiceOptions = new DefaultViewServiceOptions();
+            viewServiceOptions.Stylesheets.Add("/css/bootstrap.min.css");
 
             var factory = new IdentityServerServiceFactory();
             factory.RegisterConfigurationServices(entityFrameworkOptions);
@@ -37,11 +41,14 @@ namespace OAuthServer
             factory.UserService = new Registration<IUserService>(typeof(OAuthUserService));
             factory.Register(new Registration<IUserRepository>(userRepository));
 
+            factory.ConfigureDefaultViewService<CustomViewService>(viewServiceOptions);
+
             new TokenCleanup(entityFrameworkOptions, 1).Start();
             var scer = new X509Certificate2(@"C:\OpenSSL\OAuthServer\OAuthServerCA.pem");
             
             var options = new IdentityServerOptions
             {
+                 SiteName = "OAuth Server",
                 SigningCertificate = LoadCertificate(),
                 RequireSsl = false,
                 Factory = factory

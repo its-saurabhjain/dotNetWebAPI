@@ -48,6 +48,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -63,6 +64,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomViewService.cs" />
     <Compile Include="HashHelper.cs" />
     <Compile Include="InMemoryManager.cs" />
     <Compile Include="OAuthUserService.cs" />
@@ -142,6 +144,7 @@
       <Name>OAuth.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
