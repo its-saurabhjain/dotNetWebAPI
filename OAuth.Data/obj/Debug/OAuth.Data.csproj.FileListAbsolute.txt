@@ -1,0 +1,8 @@
+C:\Tutorials\dotNetWebAPI\OAuth.Data\bin\Debug\SocialNetwork.Data.dll
+C:\Tutorials\dotNetWebAPI\OAuth.Data\bin\Debug\SocialNetwork.Data.pdb
+C:\Tutorials\dotNetWebAPI\OAuth.Data\bin\Debug\Dapper.dll
+C:\Tutorials\dotNetWebAPI\OAuth.Data\bin\Debug\Dapper.pdb
+C:\Tutorials\dotNetWebAPI\OAuth.Data\bin\Debug\Dapper.xml
+C:\Tutorials\dotNetWebAPI\OAuth.Data\obj\Debug\OAuth.Data.csprojResolveAssemblyReference.cache
+C:\Tutorials\dotNetWebAPI\OAuth.Data\obj\Debug\SocialNetwork.Data.dll
+C:\Tutorials\dotNetWebAPI\OAuth.Data\obj\Debug\SocialNetwork.Data.pdb

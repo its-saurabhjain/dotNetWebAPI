@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register User</title>
+</head>
+<body>
+    <div class="container">
+        @using (Html.BeginForm("Register", "Home2", FormMethod.Post))
+        {
+            <label>UserName</label>
+            @Html.TextBox("username")
+            <label>Password</label>
+            @Html.Password("password")
+            <div>
+                <button class="btn btn-lg btn-primary" type="submit">Register</button>
+            </div>
+        }
+    </div>
+</body>
+
+</html>

@@ -266,3 +266,8 @@ C:\Tutorials\dotNetWebAPI\OAuth.Mvc\obj\Debug\OAuth.Mvc.csprojResolveAssemblyRef
 C:\Tutorials\dotNetWebAPI\OAuth.Mvc\bin\Thinktecture.IdentityModel.dll
 C:\Tutorials\dotNetWebAPI\OAuth.Mvc\bin\Thinktecture.IdentityModel.pdb
 C:\Tutorials\dotNetWebAPI\OAuth.Mvc\bin\Thinktecture.IdentityModel.xml
+C:\Tutorials\dotNetWebAPI\OAuth.Mvc\bin\SocialNetwork.Data.dll
+C:\Tutorials\dotNetWebAPI\OAuth.Mvc\bin\Dapper.dll
+C:\Tutorials\dotNetWebAPI\OAuth.Mvc\bin\SocialNetwork.Data.pdb
+C:\Tutorials\dotNetWebAPI\OAuth.Mvc\bin\Dapper.pdb
+C:\Tutorials\dotNetWebAPI\OAuth.Mvc\bin\Dapper.xml

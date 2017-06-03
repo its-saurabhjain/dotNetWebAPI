@@ -1,10 +1,15 @@
 ﻿using Microsoft.Owin.Security;
 using Newtonsoft.Json;
+using OAuth.Data.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -37,6 +42,26 @@ namespace OAuth.Mvc.Controllers
 
             return View();
         }
+        public ActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public void Register(string username, string password)
+        {
+            var userRepository = new UserRepository(
+                () => new SqlConnection(ConfigurationManager.ConnectionStrings["User.DB"].ConnectionString));
+            userRepository.RegisterUser(username, Sha512(password));
+        }
+        public static string Sha512(string input)
+        {
+            using (var sha = SHA512.Create())
+            {
+                var bytes = Encoding.UTF8.GetBytes(input);
+                var hash = sha.ComputeHash(bytes);
+                return Convert.ToBase64String(hash);
+            }
+        }
         [HttpPost]
         public async Task<ActionResult> Login(string username, string password)
         {
@@ -44,7 +69,7 @@ namespace OAuth.Mvc.Controllers
             var client = new OAuth2Client(new System.Uri("http://oauthserver/connect/token"), "socialnetwork", "sceret");
             var requestResponse = client.RequestAccessTokenUserName(username, password, "openid profile");
             */
-            var requestResponse = await GetTokenAsync();
+            var requestResponse = await GetTokenAsync(username, password);
             var claims = new[]
                 {
                     new Claim("access_token", requestResponse.AccessToken),
@@ -56,14 +81,13 @@ namespace OAuth.Mvc.Controllers
             //await GetTokenAsync();
             return Redirect("/Home2/Private");
         }
-
         private async Task<TokenResponse> GetTokenAsync(string username, string password)
         {
             using (var client = new HttpClient())
             {
                 var basicAuth = Convert.ToBase64String(Encoding.UTF8.GetBytes("socialnetwork:secret"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", basicAuth);
-                var rawResult = await client.PostAsync("http://oauthserver/connect/token",
+                var rawResult = await client.PostAsync("http://localhost:15638/connect/token",
                         new FormUrlEncodedContent(new[]
                         {
                             new KeyValuePair<string,string>(
@@ -83,8 +107,6 @@ namespace OAuth.Mvc.Controllers
                 return JsonConvert.DeserializeObject<TokenResponse>(dat);
             }
         }
-
-
         public ActionResult RefreshAccessToken() {
 
             var claimPrincipal = User as ClaimsPrincipal;
