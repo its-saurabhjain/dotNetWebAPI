@@ -18,6 +18,9 @@ using Thinktecture.IdentityModel.Clients;
 
 namespace OAuth.Mvc.Controllers
 {
+    /// <summary>
+    /// Resource Owner Credential flow for OAuth
+    /// </summary>
     public class Home2Controller : Controller
     {
         public ActionResult Index()
