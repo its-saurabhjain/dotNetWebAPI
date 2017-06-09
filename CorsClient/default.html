@@ -12,12 +12,13 @@
 
     <script src="Scripts/jquery-3.1.1.js"></script>
     <script>
+        //WebAPI2.Demo
         var url = "http://localhost:7825/api/patients/";
         var url2 = "http://localhost:7825/api/patients/591de2f26d7fd81e582366b4/medications";
         $(function () {
 
             var getPatientFunc = function () {
-                $.get(url2).always(showResponseFunc)
+                $.get(url).always(showResponseFunc)
                 return false;
             };
             var showResponseFunc = function(object){

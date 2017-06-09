@@ -8,6 +8,7 @@ Official MongoDB c# driver
 3. Attribute routing (nested resources)
 4. IHttpActionResult
 5. CORS: Cross Origin Resource Sharing (Microsoft.AspNet.WebApi.Cors.5.2.3)
+https://app.pluralsight.com/player?author=scott-allen&name=aspdotnet-mvc5-fundamentals-m5-webapi2&mode=live&clip=0&course=aspdotnet-mvc5-fundamentals
 ****Mongo command*********************8
 mongod --config "c:\Program Files\MongoDB\mongo.config"
 

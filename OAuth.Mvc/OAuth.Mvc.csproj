@@ -273,9 +273,9 @@
     <Compile Include="Controllers\Home2Controller_RefreshToken.cs" />
     <Compile Include="Controllers\Home2Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup-AuthCodeFlow.cs" />
-    <Compile Include="Startup-ImplicitFlow.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="Startup_AuthCodeFlow.cs" />
+    <Compile Include="Startup_ImplicitFlow.cs" />
+    <Compile Include="Startup_ResourceOwner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

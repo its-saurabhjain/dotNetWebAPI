@@ -20,7 +20,7 @@ namespace WebAPI2.Demo
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             ///seed Monogo db with initial data for patent api
-            //MongoConfig.Seed();
+            MongoConfig.Seed();
         }
     }
 }

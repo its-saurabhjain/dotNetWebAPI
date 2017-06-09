@@ -8,6 +8,7 @@ using Owin;
 using WebAPI2.Demo.Models;
 using Microsoft.Owin.Security.OAuth;
 using WebAPI2.Demo.Providers;
+using System.Web.Http.Cors;
 
 namespace WebAPI2.Demo
 {
@@ -84,7 +85,7 @@ namespace WebAPI2.Demo
                 ClientId = "To be added",
                 ClientSecret = "To be added"
             });
-            /////////Using OAuth Server/////////////
+            
 
 
         }

@@ -11,8 +11,8 @@ using System.Web.Http.Cors;
 
 namespace WebAPI2.Demo.Controllers
 {
-    [Authorize]
-    //[EnableCors("", "*", "GET")]
+    //[Authorize]
+    //[EnableCors("*", "*", "GET")]
     [EnableCors("http://localhost:56642", "*", "GET")]
     public class PatientsController : ApiController
     {
